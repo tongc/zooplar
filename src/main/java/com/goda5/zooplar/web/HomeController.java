@@ -23,9 +23,9 @@ public class HomeController {
     @Value("${app.api.datatypes.areaprice}")
     private String areaPrice;
 
-    LoadingCache<String, String> areaPriceData = CacheBuilder.newBuilder()
+    private LoadingCache<String, String> areaPriceData = CacheBuilder.newBuilder()
             .maximumSize(1000)
-            .expireAfterWrite(10, TimeUnit.MINUTES)
+            .expireAfterWrite(10, TimeUnit.HOURS)
             .build(
                     new CacheLoader<String, String>() {
                         public String load(String key) throws IOException {
