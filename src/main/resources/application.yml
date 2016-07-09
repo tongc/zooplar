@@ -1,0 +1,6 @@
+app:
+  api:
+    key: eceek75myfakwmj48pnext25
+    url: http://api.zoopla.co.uk/api/v1/
+    datatypes:
+      areaprice: average_area_sold_price
