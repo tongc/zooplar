@@ -45,4 +45,9 @@ public class HomeController {
                 .socketTimeout(1000)
                 .execute().returnContent().asString();
     }
+
+    @RequestMapping("/")
+    public String home() {
+        return "home.html";
+    }
 }
