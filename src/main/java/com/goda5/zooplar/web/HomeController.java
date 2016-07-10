@@ -33,7 +33,7 @@ public class HomeController {
                         }
                     });
 
-    @RequestMapping(value = "/areaPrice", produces = "application/xml")
+    @RequestMapping(value = "/areaPrice", produces = "text/json")
     @ResponseBody
     private String areaPrice(@RequestParam String postcode) throws IOException, ExecutionException {
         return areaPriceData.get(postcode);
